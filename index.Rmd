@@ -1,0 +1,24 @@
+---
+title: "Probabilidades y estadistica (c)"
+author: "Stefano Miyel Ruberto"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+github-repo: stefmr/PyC-Notes
+---
+
+# Prologo {-}
+
+El siguiente apunte es una recopilación de mis notas de la materia _Probabilidades y estadistica (c)_, cursada en el primer cuatrimestre del año 2022.
+
+TODO:
+
+  - Pulir notas
+  - Agregar ejercicios de ejemplo
+  - Apendice con introduccion a R
+
+```{r eval=FALSE, include=FALSE}
+library(bookdown)
+bookdown::render_book('index.Rmd', 'all')
+```

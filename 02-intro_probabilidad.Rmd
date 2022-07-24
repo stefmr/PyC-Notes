@@ -1,0 +1,155 @@
+# Introducción a la teoría de probabilidades.
+La teoria de las probabilidades cuantifica los posibles resultados de un fenomeno aleatorio medidos mediante distribuciones de probabilidad.
+
+  * Fenomenos aleatorios (Son aquellas estudiadas por la probabilidad).
+  * Fenomenos no aleatorios / Fenomenos deterministicos (No hay azar involucrado).
+
+## Espacio de probabilidades.
+
+
+Definicion (Experimento) : Un experimento es un proceso que genera observaciones y puede ser repetido. (Y en caso de no poder ser repetido?)
+
+<!-- Un espacio de probabilidad es un measure space donde S es el conjunto base, F es el Sigma que contiene a todos los subconjuntos
+finitos de S, y P es la medida que se le asigna a cada suceso. Ademas, F es una sigma algebra. -->
+
+Definicion : Llamamos _espacio de probabilidad_ a una tripla ($\Omega$, $\Sigma$, P) tal que
+
+  - $\Omega$ : Espacio muestral -> Espacio (O conjunto) de todos los posibles resultados del experimento.
+  - $\Sigma$ : Eventos o sucesos -> Posibles resultados del experimento ($\Sigma \subseteq \Omega$). 
+  - P : Probabilidad -> Función definida como $P : \Omega \to [0, 1]$ que a cada suceso le asigna una probabilidad. 
+
+Un ejemplo sencillo de un espacio de probabilidad es aquel que involucra el lanzamiento de un dado de 6 caras en el experimento. El 
+espacio muestral asociado al experimento serian todos los numeros del 1 al 6, representando cada uno a una cara del dado. Luego, como
+evento o suceso podemos tener los $C_i$ eventos, donde $C_i$ : "Sale el numero i". Por ultimo, una posible funcion de probabilidad 
+le puede asignar un valor de $\frac{1}{2}$ a evento $C_3$ mientras que a los demas les asigna $\frac{1}{8}$.
+
+Propiedades : Operaciones con eventos. Sean A, B eventos
+
+  * S $\subseteq$ S -> S se considera suceso cierto o seguro.
+  * $\emptyset \subseteq$ S -> $\subseteq$ se considera suceso imposible.
+  * A $\cup$ B -> A $\cup$ B se considera el suceso unión (Ocurre si ocurre A o B).
+  * A $\cap$ B -> A $\cap$ B Se considera el suceso intersección (Ocurre si ocurre A y B).
+  * $A^c$ -> $A^c$ es el complemento de A (Ocurre si no ocurre A).
+  * A - B -> A - B suceso diferencia (Ocurre si ocurre A y no B).
+  * Si A $\cap$ B = $\emptyset$ entonces A y B son eventos excluyentes.
+
+Definicion : Se define _frecuencia relativa de A en n experimentos_ (Independientes y en las mismas condiciones) a
+                $$f_n (A) = \frac{n_A}{n}$$
+             donde $n_A$ es el numero de veces que ocurre el evento A. Ademas,
+                $$\lim_{n -> \infty} f_n(A) = P(A)$$
+
+Esta definicion nos permite asignar una probabilidad a un evento en particular contando las veces que este ocurrio. Algunas observaciones sobre la frecuencia relativa.
+
+  * Si $n_A = n$ -> $f_n(A) = 1$ -> A es el evento seguro.
+  * Si $n_A = 0$ -> $f_n(A) = 0$ -> A es el evento imposible.
+  * Si A = S -> $f_n(A) = 1$.
+  * Si $A \cap B = \emptyset$ -> 
+    $$f_n(A \cap B) = \frac{n_A + n_B}{n} = \frac{n_A}{n} + \frac{n_B}{n} = f_n(A) + f_n(B)$$
+
+
+### Axiomas de probabilidad 
+
+Kolmogorov nos presenta los axiomas fundacionales para la teoría de la probabilidad, los cuales derivan de la interpretación 
+previamente discutida.
+Dado un experimento y un espacio muestral S con eventos $A_i$
+
+  * P(A) $\geq$ 0 $\forall$ A $\in$ S
+  * P(S) = 1
+  * Si $A_1, \ldots, A_n$ son disjuntos -> $P(\cup_{i = 1}^{\infty} A_i) = \sum_{i = 1}^{\infty} P(A_i)$
+
+## Probabilidad condicional.
+Hay situaciones en donde queremos hallar probabilidades en base a eventos que ya ocurrieron, como por ejemplo
+"Cual es la probabilidad de que llueva hoy dado que ayer llovio?"
+
+Definicion : Se define _probabilidad condicional_ a la probabilidad de que ocurra un evento A sabiendo que ocurre un evento B. Se denota P(A|B).
+
+> No es necesario que haya una relación entre los eventos.
+
+Nota : Dependiendo de los datos que tengo, puedo calcular las probabilidades de los eventos elementales y luego calcular la probabilidad condicional de un evento.
+
+<!--  Desarrollar despues... -->
+
+> La probabilidad P(A|B) toma como conjunto referencial a B en vez de S, y analiza los casos en B donde ocurre A.
+
+> P(- | F) is a Probability* (Lo vi en clase y lo acabo de ver en el Ross. Demostrar)
+
+Definicion : Sean A, B eventos, con P(B) > 0, entonces
+$$
+             P(A|B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+Como la probabilidad condicional es un espacio de probabilidad restringido al evento que ya ocurrio, entonces por definicion se cumplen los axioman de Kolmogorov.
+
+<!--
+Propiedades : Probabilidad condicional
+  * P(A|B) $\geq$ 0   $\forall A$ evento
+  * P(S|B) = 1
+  * P(A $\cap$ B) = P(A|B).P(B)   con P(B) > 0
+-->
+
+Definicion (Partición del espacio muestral) : Una partición de eventos $A_1, \ldots, A_k$ es una partición del espacio muestral S si
+
+  * $A_i \cap A_j = \emptyset$  $\forall i,j : \mathbb{N} / i \neq j$
+  * P($A_i$) > 0  $\forall i : \mathbb{N}$
+  * $\cup_{i = 1}^{\infty} A_i = S$
+
+Propiedades : Dados A, B eventos
+
+  * P($A^c$) = 1 - P(A)   $\forall A \in S$
+  * P($\emptyset$) = 0
+  * A $\subseteq$ B -> P(A) $\leq$ P(B)
+  * P(A $\cup$ B) = P(A) + P(B) - P(A $\cap$ B)
+  * P(A $\cap$ B) $\leq$ P(A) + P(B)
+
+Definicion (Eventos elementales) : Sea S un espacio muestral finito o infinito numerable. Se definen eventos elementales a los {E} con E $\in$ S.
+
+Observacion : $\cup_{i = 1}^{\infty} E_i = S$
+
+Observacion : $p_i = P(E_i) \geq 0$   $\forall E \in S$ tal que $\sum_{i = 1}^{\infty} p_i = 1$ -> A evento / P(A) = $\sum_{E \in A} P_{E}$
+
+Definicion (Espacio equiprobable) : Sea un experimento aleatorio con espacio muestral S. Sea n = #S.
+                                    Decimos que S es equiprobable si P($E_i$) = p   $\forall i : \mathbb{N}$
+
+Nota : Dado un espacio equiprobable
+$$       P(S) = \sum_{i = 1}^{n} P(E_i) = \sum_{i = 1}^{n} p = np = 1 -> p = \frac{1}{n} = \frac{1}{\#S} $$
+
+Observacion : Sea A un evento de un espacio equiprobable
+              $$ P(A) = \sum_{E_i \in A} P(E_i) = \sum_{E_i \in A} \frac{1}{n} = \frac{\#A}{n} = \frac{\#A}{\#S} $$
+
+> En espacios equiprobables los problemas se reducen a contar los elementos de un evento.
+
+## Teorema de probabilidad total. 
+Definicion : Sea S un espacio muestral y sean $A_1, \ldots, A_k$ particiones del espacio. Sea B un evento, entonces
+                                            $$P(B) = \sum_{i = 1}^{k} P(B | A_i) . P(A_i)$$
+ 
+> Pensar a S dividido en K partes. Un evento B en S puede tener resultados en diferentes particiones de S. Entonces tiene sentido pensar que P(B) es la suma de las probabilidades de cada fragmento en las particiones $A_i$.
+
+## Teorema de Bayes. 
+Definicion : Sea S un espacio muestral y sean $A_1, \ldots, A_k$ particiones del espacio. Sea B un evento tal que si P(B) > 0, entonces
+                                $$P(A_i|B) = \frac{P(B|A_i).P(A_i)}{P(B)} = \frac{P(B|A_i).P(A_i)}{\sum_{i = 1}^{k} P(B | A_i) . P(A_i)} $$
+
+## Independencia de eventos.
+
+Definicion (Eventos independientes) : Dados dos eventos A, B de un espacio. Decimos que los eventos son independientes si y solo si
+                                      P(A $\cap$ B) = P(A).P(B)
+
+Proposicion : Si P(B) > 0, entonces
+              A, B independientes <-> P(A|B) = P(A)
+
+Nota : 
+  - Eventos excluyentes : P(A $\cup$ B) = P(A) + P(B)
+  - Eventos independientes : P(A $\cap$ B) = P(A).P(B)
+  Si tengo dos eventos independientes entonces no son excluyentes (??)
+
+Proposicion : Sean A, B eventos excluyentes (A $\cap$ B = $\emptyset$) y P(A) > 0, P(B) > 0, entonces A y B no son independientes.
+
+Proposicion : P(B) = 0 -> B es independiente de todo A con P(A) > 0.
+
+Proposicion : A, B eventos independientes -> A, $B^c$ eventos independientes.
+
+Proposicion (Generalizacion de eventos independientes) : 
+      Sean $A_i, \ldots, A_n$ eventos. Decimos que $A_1, \ldots, A_n$ son independientes si
+        $$(\forall k : \mathbb{N})(2 \leq k < n \wedge \{B_i\}_{i = 1}^{k} \subseteq \{A_i\}_{i = 1}^{n} -> P(\cap_{i = 1}^{k} B_i) = \Pi_{i = 1}^{k} P(B_i))$$
+
+Nota : $\{A_i\}_{i = 1}^{n}$ conjunto de eventos.
+

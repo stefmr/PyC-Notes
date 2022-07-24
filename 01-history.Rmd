@@ -1,0 +1,40 @@
+# Introduccion historica
+
+Si tuviesemos que escribir una timeline de cientificos que fueron desarrollando la teoria de probabilidades o que se encontraron con problemas del ambito tendriamos algo como lo siguiente:
+
+  - Girolamo Cardano (The OG - Original gambler)
+  - Pierre de Fermat & Blaise Pascal (El problema de los puntos | The unifinished game)
+    Ellos fueron los que desarrollaron el concepto de _probabilidad clasica_
+      https://en.wikipedia.org/wiki/Problem_of_points
+  - Charles Huygens (Tratado de juegos de azar)
+  - Pierre-Simon Laplace & Daniel/Jacob/Nicolas Bernoulli 
+      https://en.wikipedia.org/wiki/St._Petersburg_paradox
+  - Legendre (Least squares method)
+  - Karl Friedrich Gauss (Distribucion normal)
+  - Andrey Kolmogorov (Axiomas de probabilidad)
+  - Karl Pearson (p-valores)
+  - William Gosset (Student t-distribution)
+  - Ronald Fisher (Una bocha de cosas)
+  - Jerzy Neyman & Egon Pearson (Tests de hipotesis)
+
+Antoine Gombaud es aquel matematico que le dio pie a Fermat y a Pascal a introducirse en la probabilidad con el problema de los puntos.
+Tecnicamente, se le atribuye la ley de los grandes numeros a Jacob Bernoulli (Utilizando el concepto de Laplace) y el teorema
+central del limite al mismo Laplace.
+
+Kolmogorov formalizo la teoria de probabilidades en axiomas (Similar a lo que hizo Euclides con la geometria en su texto Elements).
+
+> Al parecer, el campo de investigacion de la teoria de la probabilidad esta ligada a la investigacion de la teoria de la medida.
+
+> Por lo que veo, todos los matematicos que mencione exceptuando Kolmogorov fueron parte de la "Probabilidad clasica", mientras que este ultimo aporto a la "Teoria moderna"
+
+Problemas famosos:
+
+ - https://en.wikipedia.org/wiki/St._Petersburg_paradox
+ - https://en.wikipedia.org/wiki/Buffon%27s_needle_problem
+ - https://en.wikipedia.org/wiki/Birthday_problem
+ - https://en.wikipedia.org/wiki/Monty_Hall_problem
+ - https://en.wikipedia.org/wiki/Bertrand_paradox_(probability)
+
+Bibliografia
+
+  - http://www.glennshafer.com/assets/downloads/articles/article50.pdf

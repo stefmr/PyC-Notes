@@ -1,0 +1,64 @@
+# Teorema central del limite - Ley de los grandes numeros
+
+## Desigualdad de Markov
+
+## Desigualdad de Chebyshev
+
+Proposicion (Desigualdad de Chebyshev) : Sea $X$ una variable aleatoria con $E(X) = \mu$ y $V(X) = \frac{\sigma^2}{\epsilon^2}$, entonces
+                                         $$\forall \epsilon > 0    \rightarrow    P(|X - \mu| > \epsilon) \leq \frac{\sigma^2}{\epsilon^2}$$
+
+Nota : La importancia de la desigualdad de Chebyshev es que dada la esperanza y varianza, podemos encontrar una cota para las
+       probabilidades (No necesariamente una cota ajustada). Esto nos sirve en el caso de no conocer la distribucion concreta, 
+       pues en ese caso podriamos calcular la probabilidad en vez de acotarla.
+
+Propiedades (Equivalencias de la desigualdad de Chebyshev)
+
+  - $\forall \epsilon > 0    \rightarrow    P(|X - \mu| \leq \epsilon) \geq 1 - \frac{\sigma^2}{\epsilon^2}$
+  - $\forall k > 1    \rightarrow    P(|X - \mu| > k\sigma) \leq\frac{1}{k^2}$
+  - $\forall k > 1    \rightarrow    P(|X - \mu| \leq k\sigma) \geq 1 - \frac{1}{k^2}$
+
+## Ley de los grandes numeros
+
+### Ley debil
+Teorema (Ley debil de los grandes numeros) : Sean $X_1, \ldots, X_n$ una secuencia de variables aleatorias i.e.e. Cada una
+con una esperanza y varianza $E(X_i) = \mu$, $V(X_i) = \sigma^2$. Entonces, para todo $\epsilon > 0$ se cumple que
+
+  $$P(|\frac{X_1 + \ldots + X_n}{n}- \mu| \geq \epsilon) \rightarrow_{n \to \infty} 0$$
+
+Nota : Creo que me estoy confundiendo bastante con el hecho de que las variables aleatorias caracterizan a un problema y que
+       al momento de hacer calculos con ellas (Sumas o productos) las cosas tengan sentido.
+       Capaz puedo ver a cada variable aleatoria independiente $X_i$ como un experimento independiente donde cada una de
+       ellas tiene la misma media y desviacion estandar, haciendo posible que la media y desviacion estandar del promedio 
+       converjan al mismo valor.
+
+### Ley fuerte 
+
+Teorema (Ley fuerte de los grandes numeros) : Sean $X_1, \ldots, X_n$ una secuencia de variables aleatorias i.e.e. Cada una
+con una esperanza y varianza $E(X_i) = \mu$, $V(X_i) = \sigma^2$. Entonces:
+      $$\frac{X_1 + \ldots, X_n}{n} \rightarrow \mu       n -> \infty$$
+con probabilidad 1 (Suceso cierto)
+
+
+Nota : Lo que me determina la ley debil es que la probabilidad de convergencia de los valores tiende a 0 cuando la cantidad de 
+       muestras crece. Mientras que la ley fuerte determina la convergencia del promedio de las variables hacia la media.
+
+Observacion : SLLN -> WLLN pero WLLN -/> SLLN, pues convergencia absoluta implica la convergencia en probabilidad, pero si las
+            variables convergen en probabilidad, no necesariamente las variables "son iguales"
+
+Nota : En el apunte de Ana Bianco hay una seccion que habla sobre distribuciones de sumas de variables aleatorias independientes.
+       Si no mal recuerdo, esto lo vimos muy por encima en la clase.
+
+Lema (3.1 en el Ross)
+
+## Teorema central del limite
+
+Teorema (Teorema central del limite) : Sean $X_1, X_2, \ldots$ una secuencia de variables aleatorias independientes e i.i.d.
+Cada una de ellas con $E(X_i) = \mu$ y $V(X_i) = \sigma^2 \forall i \in \mathbb{N}$. Sea Y la siguiente variable aleatoria:
+  $$Y = \frac{X_1 + X_2 + \ldots + X_n - n\mu}{\sigma \sqrt{n}}$$
+tiende a una distribucion normal conforme $n \to \infty$
+
+Corolario : Si $X_1, \ldots, X_n$ son independientes. Cada una de ellas con $E(X_i) = \mu_i$ y $V(X_i) = \sigma_i^2 \forall i \in \mathbb{N}$
+            Si cada v.a tiene una cota superior M tal que $P(X_i < M) = 1 \forall i$ y $\sum_{i=1}^\infty \sigma_i^2 = \infty$,
+            entonces 
+            $$P(\hat{X - \mu_i} / \sqrt{\sum_{i = 1}^{n} \sigma_i^2}) \to \Phi(a)$$ 
+            conforme $n \to \infty$

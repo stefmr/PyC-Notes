@@ -1,0 +1,126 @@
+# Vectores aleatorios
+
+Dado un experimento y su espacio muestra asociado, es posible definir diferentes variables aleatorias. Asi como analizamos cada variable aleatoria de manera individual, es posible analizar varias de manera conjunta.
+
+Definicion : Sean $X_1, \ldots, X_n$ variables aleatorias, definimos un _vector aleatorio_ al vector $\mathcal{V} : \Omega \to \mathbb{R}^n$ tal que
+  $$ V(\omega) = <X_1(\omega), X_2(\omega), \ldots, X_n(\omega)>$$
+donde cada funcion coordenada es una variable aleatoria.
+
+> Tipico ejemplo de X = 'Altura de una persona', Y = 'Peso de una persona'.
+> En un ejemplo de computacion podria ser la cantidad de tiempo de ejecucion y la memoria utilizada.
+
+## Vectores aleatorios discretos
+
+Observacion : Rango del vector : $Rg_{X Y} = \{ (x, y) / x \in Rg_{X}, y \in Rg_{Y} \wedge p_{X Y}(x, y) > 0 \}$ (Para n = 2)
+            $Rg_{X Y} \subseteq \{ (x, y) / x \in Rg_{X}, y \in Rg_{Y} \}$ (Para n = 2)
+
+Definicion : Sean $X, Y$ variables aleatorias discretas definidas sobre un espacio muestral $\mathcal{S}$. Se define _funcion de probabilidad puntual conjunta_ como:
+             $$p_{X Y}(x, y) = P(X = x, Y = y)$$
+
+Observacion : La funcion de probabilidad conjunta es una probabilidad, por lo tanto cumple los axiomas de probabilidad
+
+  * $p_{X Y} (x, y) \geq 0 \forall (x, y) \in Rg_{X Y}$
+  * $\sum_{x \in Rg_{X}} \sum_{y \in Rg_{Y}} p_{X Y} (x, y) = 1$ 
+
+Definicion : Se define _funciones marginales_ de un vector aleatorio de dos variables como
+
+  $$p_{X}(x) = \sum_{y \in Y} p_{X Y} (x, y) \qquad p_{Y}(y) = \sum_{x \in X} p_{X Y} (x, y)$$
+
+> Las funciones marginales me determinan las probabilidades puntuales de una variable aleatoria del vector en un valor puntual.
+
+Definicion : La _funcion de distribucion acumulada conjunta_ de un vector aleatorio esta dado por
+  $$F_{X Y}(x, y) = \sum_{s \leq X} \sum_{t \leq Y}  p_{X Y} (x, y) \qquad \forall (x, y) \in \mathbb{R}^2$$
+
+Definicion : Sea $\mathcal{V}$ un vector aleatorio con variables aleatorias continuas. Decimos que el vector $\mathcal{V}$ es 
+continuo si existe una _funcion de densidad conjunta_ $f_{X Y} : \mathbb{R}^2 \rightarrow \mathbb{R}^{\geq 0}$ tal que
+  $$P((X, Y) \in A) = \int \int_{A} f_{X Y}(x, y) dx dy \qquad \forall A \subseteq \mathbb{R}^2$$
+
+## Vectores aleatorios continuos
+
+Observacion : Dada una funcion de densidad conjunta $f_{X Y}$. Si queremos encontrar la funcion de densidad para cualquiera de
+              las dos variables aleatorias, debo integrar sobre la variable que no es de interes.
+
+Observacion : Dado un vector aleatorio de K coordenadas, puedo hallar las funciones de densidad para cualquier subconjunto de
+              las variables aleatorias $X_i \forall i, 0 \leq i \leq k-1$
+
+Definicion : Sea $\mathcal{V}$ un vector aleatorio continuo con funcion de densidad conjunta $f_{X Y}(x, y)$. La _funcion de distribucion acumulada conjunta_ de $\mathcal{V}$ esta dada por
+            $$F_{(X, Y)}(x, y) = \int_{-\infty}^x \int_{-\infty}^y f_{X Y}(s, t) ds dt \qquad \forall A \subseteq \mathbb{R}^2$$
+
+Propiedades : Funcion de distribucion acumulada
+
+  * $\lim_{(X_1, \ldots, X_n) -> \infty} F((X_1, \ldots, X_n)) = 1$
+  * $\lim_{X_i -> -\infty} F((X_1, \ldots, X_i ,\ldots ,X_n)) = 0$ para algun i
+  * Monotonia : $F_{X} \leq F_{\hat{X}}$ si $X \leq \hat{X}$
+    Esta propiedad define un orden sobre los vectores de $\mathbb{R}^n$. Vamos a decir que un vector es menor a otro si todas
+    las coordenadas del uno son menores a las del otro.
+  * (Chequear) $P(a \leq x \leq b, c \leq y \leq d) = F(b, d) - F(a, d) - F(b, c) + F(a, c) \geq 0$
+    Caso contrario, entonces F no es una probabilidad.
+
+Nota : Para hallar la funcion de densidad conjunta de un vector aleatorio dada la funcion de distribucion, entonces basta con
+       derivar F con cada una de las variables aleatorias.
+
+Duda : Es posible que, si la funcion F es $C^1$, entonces tranquilamente pueda calcular la funcion de densidad conjunta derivando
+       en cualquier orden?
+Respuesta : Si, pero en la practica no siempre ocurre
+
+## Probabilidad condicional de vectores aleatorios.
+
+Definicion : Sea $\mathcal{V}$ un vector aleatorio discreto con funcion de densidad conjunta $f_{X Y}(x, y)$ y funciones de probabilidad marginales para cada variable aleatoria. Sea $x \in X$ tal que $p_{X}(x) > 0$. La _funcion de probabilidad condicional_ de Y dado $X = x$ esta dada por
+             $$p_{Y | X = x} (y) = \frac{p_{X Y}(x, y)}{p_{X}(x)}$$
+Equivalentemente, la _funcion de probabilidad condicional_ de $X$ dado $Y = y$ esta dada por
+             $$p_{X | Y = y} (x) = \frac{p_{X Y}(x, y)}{p_{Y}(y)}$$
+
+Definicion : Sea $\mathcal{V}$ un vector aleatorio continuo con funcion de densidad conjunta $f_{X Y}(x, y)$ y funciones de probabilidad marginales para cada variable aleatoria. Sea $x \in X$ tal que $f_{X}(x) > 0$. La _funcion de densidad condicional_ de Y dado $X = x$ esta dada por
+             $$f_{Y | X = x} (y) = \frac{f_{X Y}(x, y)}{f_{X}(x)}$$
+Equivalentemente, la _funcion de densidad condicional_ de $X$ dado $Y = y$ esta dada por
+             $$f_{X | Y = y} (x) = \frac{f_{X Y}(x, y)}{f_{Y}(y)}$$
+
+Observacion : Las funciones de probabilidad condicional cumplen que son una probabilidad. Podemos observar que la probabilidad condicional en vectores aleatorios es en esencia igual a cualquier probabilidad condicional, es decir, analizo probabilidades sobre un espacio de probabilidades reducido.
+
+Definicion : Sea $\mathcal{V}$ un vector aleatorio discreto. Una distribucion multinomial (Extension de la distribucion binomial) se denota $\mathcal{V} ~ M(n, p_1, \ldots, p_n)$
+
+## Independencia de variables aleatorias sobre un vector.
+Definicion : Sean $X_1, \ldots, X_n$ variables aleatorias. Se dice que son independientes si 
+             $$P(X_1 \in B_1, \ldots, X_n \in B_n) = P(X_1 \in B_1) * \ldots * P(X_n \in B_n)$$
+
+Teorema : Sean $X_1, \ldots, X_n$ variables aleatorias discretas. Son independientes si y solo si puedo escribir la probabilidad conjunta de las variables como el producto de las probabilidades marginales de las variables. Es decir:
+          $$p_{(X_1 \ldots, X_n)}(X_1, \ldots, X_n) = \prod_{i = 1}^{n} p_{X_i}(x_i)$$
+
+Teorema : Sean $X_1, \ldots, X_n$ variables aleatorias continuas. Son independientes si y solo si puedo escribir la probabilidad acumulada como el producto de las probabilidades acumuladas marginales de las variables. Es decir:
+          $$F_{(X_1 \ldots, X_n)}(t_1, \ldots, t_n) = \prod_{i = 1}^{n} F_{X_i}(t_i)$$
+
+Proposicion : Si existen funciones h y g tales que $p_{X Y}(x, y) = c.h(x).g(y)$ con $c > 0$, entonces $X$ e Y son independientes
+
+## Esperanza y covarianza de vectores aleatorios.
+
+Proposicion : Dado el vector aleatorio $\mathcal{V} = <X, Y>$ donde $X$ e $Y$ son dos variables aleatorias, entonces la esperanza del vector aleatorio esta dado por
+
+- Si el vector es discreto
+  $$ E_{h(X, Y)} = \sum_{x \in Rg{x}} \sum_{y \in Rg{y}} h(x, y) p_{XY}(x, y) dx dy $$
+- Si el vector es continuo 
+  $$ E_{h(X, Y)} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} h(x, y) f_{XY}(x, y) dx dy $$
+
+Proposicion : Si $X$ e $Y$ son independientes, entonces
+              $$E(XY) = E(X)E(Y) $$
+
+En vectores aleatorios buscamos la relacion que hay entre los valores de las variables. Para eso utilizamos la covarianza, la cual nos da una nocion de como se relacionan.
+En general, la covarianza se mide como
+
+- Si el vector es discreto
+  $$cov(X, Y) = \sum_{x} \sum_{y} (\mu_x - x)(\mu_y - y)p_{XY}(x,y)$$
+
+- Si el vector es continuo 
+  $$cov(X, Y) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} (\mu_x - x)(\mu_y - y)f_{XY}(x,y) dx dy$$
+
+Proposicion : $cov(X, Y) = E(XY) - E(X)E(Y)$
+
+Definicion : Definimos _coeficiente de correlacion_ entre dos variables a
+$$\rho(X, Y) = \frac{cov(X, Y)}{\sigma_X \sigma_Y}$$
+
+> El coeficiente de correlacion determina (De alguna manera) la proporcion entre la covarianza de dos variables y sus desviaciones estandar. Tiene un poco de sentido
+
+Propiedades :
+
+  - $-1 \leq \rho(X, Y) \leq 1$
+  - $\rho(aX + b, cY +d) = sg(ac) . \rho(X, Y)$
+  - $|\rho(X, Y) = 1| \leftrightarrow Y = aX + b$ con probabilidad 1 (No lo entiendo...)

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Introducción a la teoría de probabilidades. | Probabilidades y estadistica (c)</title>
+  <meta name="description" content="2 Introducción a la teoría de probabilidades. | Probabilidades y estadistica (c)" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Introducción a la teoría de probabilidades. | Probabilidades y estadistica (c)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="stefmr/PyC-Notes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Introducción a la teoría de probabilidades. | Probabilidades y estadistica (c)" />
+  
+  
+  
+
+<meta name="author" content="Stefano Miyel Ruberto" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduccion-historica.html"/>
+<link rel="next" href="variables-aleatorias.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Probabilidades y estadistica (C)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="1" data-path="introduccion-historica.html"><a href="introduccion-historica.html"><i class="fa fa-check"></i><b>1</b> Introduccion historica</a></li>
+<li class="chapter" data-level="2" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html"><i class="fa fa-check"></i><b>2</b> Introducción a la teoría de probabilidades.</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#espacio-de-probabilidades."><i class="fa fa-check"></i><b>2.1</b> Espacio de probabilidades.</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#axiomas-de-probabilidad"><i class="fa fa-check"></i><b>2.1.1</b> Axiomas de probabilidad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#probabilidad-condicional."><i class="fa fa-check"></i><b>2.2</b> Probabilidad condicional.</a></li>
+<li class="chapter" data-level="2.3" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-probabilidad-total."><i class="fa fa-check"></i><b>2.3</b> Teorema de probabilidad total.</a></li>
+<li class="chapter" data-level="2.4" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-bayes."><i class="fa fa-check"></i><b>2.4</b> Teorema de Bayes.</a></li>
+<li class="chapter" data-level="2.5" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#independencia-de-eventos."><i class="fa fa-check"></i><b>2.5</b> Independencia de eventos.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>3</b> Variables aleatorias</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#definicion."><i class="fa fa-check"></i><b>3.1</b> Definicion.</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#esperanza"><i class="fa fa-check"></i><b>3.1.1</b> Esperanza</a></li>
+<li class="chapter" data-level="3.1.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#varianza"><i class="fa fa-check"></i><b>3.1.2</b> Varianza</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variables-aleatorias-discretas"><i class="fa fa-check"></i><b>3.2</b> Variables aleatorias discretas</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-bernoulli"><i class="fa fa-check"></i><b>3.2.1</b> Distribucion Bernoulli</a></li>
+<li class="chapter" data-level="3.2.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-binomial"><i class="fa fa-check"></i><b>3.2.2</b> Distribucion binomial</a></li>
+<li class="chapter" data-level="3.2.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-geometrica"><i class="fa fa-check"></i><b>3.2.3</b> Distribucion geometrica</a></li>
+<li class="chapter" data-level="3.2.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-hipergeometrica"><i class="fa fa-check"></i><b>3.2.4</b> Distribucion hipergeometrica</a></li>
+<li class="chapter" data-level="3.2.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-binomial-negativa"><i class="fa fa-check"></i><b>3.2.5</b> Distribucion binomial negativa</a></li>
+<li class="chapter" data-level="3.2.6" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-poisson"><i class="fa fa-check"></i><b>3.2.6</b> Distribucion Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#procesos-de-poisson."><i class="fa fa-check"></i><b>3.3</b> Procesos de Poisson.</a></li>
+<li class="chapter" data-level="3.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variables-aleatorias-continuas."><i class="fa fa-check"></i><b>3.4</b> Variables aleatorias continuas.</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-uniforme-x-uab"><i class="fa fa-check"></i><b>3.4.1</b> Distribucion uniforme (<span class="math inline">\(X ~ U(A,B)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-normal-x-nmu-sigma2---distribucion-normal-standard-z-n0-1"><i class="fa fa-check"></i><b>3.4.2</b> Distribucion normal (<span class="math inline">\(X ~ N(\mu, \sigma^2\)</span>)) - Distribucion normal standard (<span class="math inline">\(Z ~ N(0, 1\)</span>))</a></li>
+<li class="chapter" data-level="3.4.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-gamma-x-gammaalpha-lambda"><i class="fa fa-check"></i><b>3.4.3</b> Distribucion gamma (<span class="math inline">\(X ~ \Gamma(\alpha, \lambda)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-exponencial-x-epsilonlambda"><i class="fa fa-check"></i><b>3.4.4</b> Distribucion exponencial (<span class="math inline">\(X ~ \epsilon(\lambda)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-cauchy-x-epsilonlambda"><i class="fa fa-check"></i><b>3.4.5</b> Distribucion Cauchy (<span class="math inline">\(X ~ \epsilon(\lambda)\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#generacion-de-numeros-aleatorios."><i class="fa fa-check"></i><b>3.5</b> Generacion de numeros aleatorios.</a></li>
+<li class="chapter" data-level="3.6" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#funcion-generadora-de-momentos."><i class="fa fa-check"></i><b>3.6</b> Funcion generadora de momentos.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html"><i class="fa fa-check"></i><b>4</b> Vectores aleatorios</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#vectores-aleatorios-discretos"><i class="fa fa-check"></i><b>4.1</b> Vectores aleatorios discretos</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#vectores-aleatorios-continuos"><i class="fa fa-check"></i><b>4.2</b> Vectores aleatorios continuos</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#probabilidad-condicional-de-vectores-aleatorios."><i class="fa fa-check"></i><b>4.3</b> Probabilidad condicional de vectores aleatorios.</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#independencia-de-variables-aleatorias-sobre-un-vector."><i class="fa fa-check"></i><b>4.4</b> Independencia de variables aleatorias sobre un vector.</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#esperanza-y-covarianza-de-vectores-aleatorios."><i class="fa fa-check"></i><b>4.5</b> Esperanza y covarianza de vectores aleatorios.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><i class="fa fa-check"></i><b>5</b> Teorema central del limite - Ley de los grandes numeros</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#desigualdad-de-markov"><i class="fa fa-check"></i><b>5.1</b> Desigualdad de Markov</a></li>
+<li class="chapter" data-level="5.2" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#desigualdad-de-chebyshev"><i class="fa fa-check"></i><b>5.2</b> Desigualdad de Chebyshev</a></li>
+<li class="chapter" data-level="5.3" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-de-los-grandes-numeros"><i class="fa fa-check"></i><b>5.3</b> Ley de los grandes numeros</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-debil"><i class="fa fa-check"></i><b>5.3.1</b> Ley debil</a></li>
+<li class="chapter" data-level="5.3.2" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-fuerte"><i class="fa fa-check"></i><b>5.3.2</b> Ley fuerte</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#teorema-central-del-limite"><i class="fa fa-check"></i><b>5.4</b> Teorema central del limite</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilidades y estadistica (c)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción-a-la-teoría-de-probabilidades." class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Introducción a la teoría de probabilidades.<a href="introducción-a-la-teoría-de-probabilidades..html#introducción-a-la-teoría-de-probabilidades." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La teoria de las probabilidades cuantifica los posibles resultados de un fenomeno aleatorio medidos mediante distribuciones de probabilidad.</p>
+<ul>
+<li>Fenomenos aleatorios (Son aquellas estudiadas por la probabilidad).</li>
+<li>Fenomenos no aleatorios / Fenomenos deterministicos (No hay azar involucrado).</li>
+</ul>
+<div id="espacio-de-probabilidades." class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Espacio de probabilidades.<a href="introducción-a-la-teoría-de-probabilidades..html#espacio-de-probabilidades." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion (Experimento) : Un experimento es un proceso que genera observaciones y puede ser repetido. (Y en caso de no poder ser repetido?)</p>
+<!-- Un espacio de probabilidad es un measure space donde S es el conjunto base, F es el Sigma que contiene a todos los subconjuntos
+finitos de S, y P es la medida que se le asigna a cada suceso. Ademas, F es una sigma algebra. -->
+<p>Definicion : Llamamos <em>espacio de probabilidad</em> a una tripla (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\Sigma\)</span>, P) tal que</p>
+<ul>
+<li><span class="math inline">\(\Omega\)</span> : Espacio muestral -&gt; Espacio (O conjunto) de todos los posibles resultados del experimento.</li>
+<li><span class="math inline">\(\Sigma\)</span> : Eventos o sucesos -&gt; Posibles resultados del experimento (<span class="math inline">\(\Sigma \subseteq \Omega\)</span>).</li>
+<li>P : Probabilidad -&gt; Función definida como <span class="math inline">\(P : \Omega \to [0, 1]\)</span> que a cada suceso le asigna una probabilidad.</li>
+</ul>
+<p>Un ejemplo sencillo de un espacio de probabilidad es aquel que involucra el lanzamiento de un dado de 6 caras en el experimento. El
+espacio muestral asociado al experimento serian todos los numeros del 1 al 6, representando cada uno a una cara del dado. Luego, como
+evento o suceso podemos tener los <span class="math inline">\(C_i\)</span> eventos, donde <span class="math inline">\(C_i\)</span> : “Sale el numero i”. Por ultimo, una posible funcion de probabilidad
+le puede asignar un valor de <span class="math inline">\(\frac{1}{2}\)</span> a evento <span class="math inline">\(C_3\)</span> mientras que a los demas les asigna <span class="math inline">\(\frac{1}{8}\)</span>.</p>
+<p>Propiedades : Operaciones con eventos. Sean A, B eventos</p>
+<ul>
+<li>S <span class="math inline">\(\subseteq\)</span> S -&gt; S se considera suceso cierto o seguro.</li>
+<li><span class="math inline">\(\emptyset \subseteq\)</span> S -&gt; <span class="math inline">\(\subseteq\)</span> se considera suceso imposible.</li>
+<li>A <span class="math inline">\(\cup\)</span> B -&gt; A <span class="math inline">\(\cup\)</span> B se considera el suceso unión (Ocurre si ocurre A o B).</li>
+<li>A <span class="math inline">\(\cap\)</span> B -&gt; A <span class="math inline">\(\cap\)</span> B Se considera el suceso intersección (Ocurre si ocurre A y B).</li>
+<li><span class="math inline">\(A^c\)</span> -&gt; <span class="math inline">\(A^c\)</span> es el complemento de A (Ocurre si no ocurre A).</li>
+<li>A - B -&gt; A - B suceso diferencia (Ocurre si ocurre A y no B).</li>
+<li>Si A <span class="math inline">\(\cap\)</span> B = <span class="math inline">\(\emptyset\)</span> entonces A y B son eventos excluyentes.</li>
+</ul>
+<p>Definicion : Se define <em>frecuencia relativa de A en n experimentos</em> (Independientes y en las mismas condiciones) a
+<span class="math display">\[f_n (A) = \frac{n_A}{n}\]</span>
+donde <span class="math inline">\(n_A\)</span> es el numero de veces que ocurre el evento A. Ademas,
+<span class="math display">\[\lim_{n -&gt; \infty} f_n(A) = P(A)\]</span></p>
+<p>Esta definicion nos permite asignar una probabilidad a un evento en particular contando las veces que este ocurrio. Algunas observaciones sobre la frecuencia relativa.</p>
+<ul>
+<li>Si <span class="math inline">\(n_A = n\)</span> -&gt; <span class="math inline">\(f_n(A) = 1\)</span> -&gt; A es el evento seguro.</li>
+<li>Si <span class="math inline">\(n_A = 0\)</span> -&gt; <span class="math inline">\(f_n(A) = 0\)</span> -&gt; A es el evento imposible.</li>
+<li>Si A = S -&gt; <span class="math inline">\(f_n(A) = 1\)</span>.</li>
+<li>Si <span class="math inline">\(A \cap B = \emptyset\)</span> -&gt;
+<span class="math display">\[f_n(A \cap B) = \frac{n_A + n_B}{n} = \frac{n_A}{n} + \frac{n_B}{n} = f_n(A) + f_n(B)\]</span></li>
+</ul>
+<div id="axiomas-de-probabilidad" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Axiomas de probabilidad<a href="introducción-a-la-teoría-de-probabilidades..html#axiomas-de-probabilidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kolmogorov nos presenta los axiomas fundacionales para la teoría de la probabilidad, los cuales derivan de la interpretación
+previamente discutida.
+Dado un experimento y un espacio muestral S con eventos <span class="math inline">\(A_i\)</span></p>
+<ul>
+<li>P(A) <span class="math inline">\(\geq\)</span> 0 <span class="math inline">\(\forall\)</span> A <span class="math inline">\(\in\)</span> S</li>
+<li>P(S) = 1</li>
+<li>Si <span class="math inline">\(A_1, \ldots, A_n\)</span> son disjuntos -&gt; <span class="math inline">\(P(\cup_{i = 1}^{\infty} A_i) = \sum_{i = 1}^{\infty} P(A_i)\)</span></li>
+</ul>
+</div>
+</div>
+<div id="probabilidad-condicional." class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Probabilidad condicional.<a href="introducción-a-la-teoría-de-probabilidades..html#probabilidad-condicional." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hay situaciones en donde queremos hallar probabilidades en base a eventos que ya ocurrieron, como por ejemplo
+“Cual es la probabilidad de que llueva hoy dado que ayer llovio?”</p>
+<p>Definicion : Se define <em>probabilidad condicional</em> a la probabilidad de que ocurra un evento A sabiendo que ocurre un evento B. Se denota P(A|B).</p>
+<blockquote>
+<p>No es necesario que haya una relación entre los eventos.</p>
+</blockquote>
+<p>Nota : Dependiendo de los datos que tengo, puedo calcular las probabilidades de los eventos elementales y luego calcular la probabilidad condicional de un evento.</p>
+<!--  Desarrollar despues... -->
+<blockquote>
+<p>La probabilidad P(A|B) toma como conjunto referencial a B en vez de S, y analiza los casos en B donde ocurre A.</p>
+</blockquote>
+<blockquote>
+<p>P(- | F) is a Probability* (Lo vi en clase y lo acabo de ver en el Ross. Demostrar)</p>
+</blockquote>
+<p>Definicion : Sean A, B eventos, con P(B) &gt; 0, entonces
+<span class="math display">\[
+             P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]</span></p>
+<p>Como la probabilidad condicional es un espacio de probabilidad restringido al evento que ya ocurrio, entonces por definicion se cumplen los axioman de Kolmogorov.</p>
+<!--
+Propiedades : Probabilidad condicional
+  * P(A|B) $\geq$ 0   $\forall A$ evento
+  * P(S|B) = 1
+  * P(A $\cap$ B) = P(A|B).P(B)   con P(B) > 0
+-->
+<p>Definicion (Partición del espacio muestral) : Una partición de eventos <span class="math inline">\(A_1, \ldots, A_k\)</span> es una partición del espacio muestral S si</p>
+<ul>
+<li><span class="math inline">\(A_i \cap A_j = \emptyset\)</span> <span class="math inline">\(\forall i,j : \mathbb{N} / i \neq j\)</span></li>
+<li>P(<span class="math inline">\(A_i\)</span>) &gt; 0 <span class="math inline">\(\forall i : \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\cup_{i = 1}^{\infty} A_i = S\)</span></li>
+</ul>
+<p>Propiedades : Dados A, B eventos</p>
+<ul>
+<li>P(<span class="math inline">\(A^c\)</span>) = 1 - P(A) <span class="math inline">\(\forall A \in S\)</span></li>
+<li>P(<span class="math inline">\(\emptyset\)</span>) = 0</li>
+<li>A <span class="math inline">\(\subseteq\)</span> B -&gt; P(A) <span class="math inline">\(\leq\)</span> P(B)</li>
+<li>P(A <span class="math inline">\(\cup\)</span> B) = P(A) + P(B) - P(A <span class="math inline">\(\cap\)</span> B)</li>
+<li>P(A <span class="math inline">\(\cap\)</span> B) <span class="math inline">\(\leq\)</span> P(A) + P(B)</li>
+</ul>
+<p>Definicion (Eventos elementales) : Sea S un espacio muestral finito o infinito numerable. Se definen eventos elementales a los {E} con E <span class="math inline">\(\in\)</span> S.</p>
+<p>Observacion : <span class="math inline">\(\cup_{i = 1}^{\infty} E_i = S\)</span></p>
+<p>Observacion : <span class="math inline">\(p_i = P(E_i) \geq 0\)</span> <span class="math inline">\(\forall E \in S\)</span> tal que <span class="math inline">\(\sum_{i = 1}^{\infty} p_i = 1\)</span> -&gt; A evento / P(A) = <span class="math inline">\(\sum_{E \in A} P_{E}\)</span></p>
+<p>Definicion (Espacio equiprobable) : Sea un experimento aleatorio con espacio muestral S. Sea n = #S.
+Decimos que S es equiprobable si P(<span class="math inline">\(E_i\)</span>) = p <span class="math inline">\(\forall i : \mathbb{N}\)</span></p>
+<p>Nota : Dado un espacio equiprobable
+<span class="math display">\[       P(S) = \sum_{i = 1}^{n} P(E_i) = \sum_{i = 1}^{n} p = np = 1 -&gt; p = \frac{1}{n} = \frac{1}{\#S} \]</span></p>
+<p>Observacion : Sea A un evento de un espacio equiprobable
+<span class="math display">\[ P(A) = \sum_{E_i \in A} P(E_i) = \sum_{E_i \in A} \frac{1}{n} = \frac{\#A}{n} = \frac{\#A}{\#S} \]</span></p>
+<blockquote>
+<p>En espacios equiprobables los problemas se reducen a contar los elementos de un evento.</p>
+</blockquote>
+</div>
+<div id="teorema-de-probabilidad-total." class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Teorema de probabilidad total.<a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-probabilidad-total." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion : Sea S un espacio muestral y sean <span class="math inline">\(A_1, \ldots, A_k\)</span> particiones del espacio. Sea B un evento, entonces
+<span class="math display">\[P(B) = \sum_{i = 1}^{k} P(B | A_i) . P(A_i)\]</span></p>
+<blockquote>
+<p>Pensar a S dividido en K partes. Un evento B en S puede tener resultados en diferentes particiones de S. Entonces tiene sentido pensar que P(B) es la suma de las probabilidades de cada fragmento en las particiones <span class="math inline">\(A_i\)</span>.</p>
+</blockquote>
+</div>
+<div id="teorema-de-bayes." class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Teorema de Bayes.<a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-bayes." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion : Sea S un espacio muestral y sean <span class="math inline">\(A_1, \ldots, A_k\)</span> particiones del espacio. Sea B un evento tal que si P(B) &gt; 0, entonces
+<span class="math display">\[P(A_i|B) = \frac{P(B|A_i).P(A_i)}{P(B)} = \frac{P(B|A_i).P(A_i)}{\sum_{i = 1}^{k} P(B | A_i) . P(A_i)} \]</span></p>
+</div>
+<div id="independencia-de-eventos." class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Independencia de eventos.<a href="introducción-a-la-teoría-de-probabilidades..html#independencia-de-eventos." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion (Eventos independientes) : Dados dos eventos A, B de un espacio. Decimos que los eventos son independientes si y solo si
+P(A <span class="math inline">\(\cap\)</span> B) = P(A).P(B)</p>
+<p>Proposicion : Si P(B) &gt; 0, entonces
+A, B independientes &lt;-&gt; P(A|B) = P(A)</p>
+<p>Nota :
+- Eventos excluyentes : P(A <span class="math inline">\(\cup\)</span> B) = P(A) + P(B)
+- Eventos independientes : P(A <span class="math inline">\(\cap\)</span> B) = P(A).P(B)
+Si tengo dos eventos independientes entonces no son excluyentes (??)</p>
+<p>Proposicion : Sean A, B eventos excluyentes (A <span class="math inline">\(\cap\)</span> B = <span class="math inline">\(\emptyset\)</span>) y P(A) &gt; 0, P(B) &gt; 0, entonces A y B no son independientes.</p>
+<p>Proposicion : P(B) = 0 -&gt; B es independiente de todo A con P(A) &gt; 0.</p>
+<p>Proposicion : A, B eventos independientes -&gt; A, <span class="math inline">\(B^c\)</span> eventos independientes.</p>
+<p>Proposicion (Generalizacion de eventos independientes) :
+Sean <span class="math inline">\(A_i, \ldots, A_n\)</span> eventos. Decimos que <span class="math inline">\(A_1, \ldots, A_n\)</span> son independientes si
+<span class="math display">\[(\forall k : \mathbb{N})(2 \leq k &lt; n \wedge \{B_i\}_{i = 1}^{k} \subseteq \{A_i\}_{i = 1}^{n} -&gt; P(\cap_{i = 1}^{k} B_i) = \Pi_{i = 1}^{k} P(B_i))\]</span></p>
+<p>Nota : <span class="math inline">\(\{A_i\}_{i = 1}^{n}\)</span> conjunto de eventos.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduccion-historica.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variables-aleatorias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "sepia",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Vectores aleatorios | Probabilidades y estadistica (c)</title>
+  <meta name="description" content="4 Vectores aleatorios | Probabilidades y estadistica (c)" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Vectores aleatorios | Probabilidades y estadistica (c)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="stefmr/PyC-Notes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Vectores aleatorios | Probabilidades y estadistica (c)" />
+  
+  
+  
+
+<meta name="author" content="Stefano Miyel Ruberto" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="variables-aleatorias.html"/>
+<link rel="next" href="teorema-central-del-limite---ley-de-los-grandes-numeros.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Probabilidades y estadistica (C)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prologo</a></li>
+<li class="chapter" data-level="1" data-path="introduccion-historica.html"><a href="introduccion-historica.html"><i class="fa fa-check"></i><b>1</b> Introduccion historica</a></li>
+<li class="chapter" data-level="2" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html"><i class="fa fa-check"></i><b>2</b> Introducción a la teoría de probabilidades.</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#espacio-de-probabilidades."><i class="fa fa-check"></i><b>2.1</b> Espacio de probabilidades.</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#axiomas-de-probabilidad"><i class="fa fa-check"></i><b>2.1.1</b> Axiomas de probabilidad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#probabilidad-condicional."><i class="fa fa-check"></i><b>2.2</b> Probabilidad condicional.</a></li>
+<li class="chapter" data-level="2.3" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-probabilidad-total."><i class="fa fa-check"></i><b>2.3</b> Teorema de probabilidad total.</a></li>
+<li class="chapter" data-level="2.4" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#teorema-de-bayes."><i class="fa fa-check"></i><b>2.4</b> Teorema de Bayes.</a></li>
+<li class="chapter" data-level="2.5" data-path="introducción-a-la-teoría-de-probabilidades..html"><a href="introducción-a-la-teoría-de-probabilidades..html#independencia-de-eventos."><i class="fa fa-check"></i><b>2.5</b> Independencia de eventos.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>3</b> Variables aleatorias</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#definicion."><i class="fa fa-check"></i><b>3.1</b> Definicion.</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#esperanza"><i class="fa fa-check"></i><b>3.1.1</b> Esperanza</a></li>
+<li class="chapter" data-level="3.1.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#varianza"><i class="fa fa-check"></i><b>3.1.2</b> Varianza</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variables-aleatorias-discretas"><i class="fa fa-check"></i><b>3.2</b> Variables aleatorias discretas</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-bernoulli"><i class="fa fa-check"></i><b>3.2.1</b> Distribucion Bernoulli</a></li>
+<li class="chapter" data-level="3.2.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-binomial"><i class="fa fa-check"></i><b>3.2.2</b> Distribucion binomial</a></li>
+<li class="chapter" data-level="3.2.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-geometrica"><i class="fa fa-check"></i><b>3.2.3</b> Distribucion geometrica</a></li>
+<li class="chapter" data-level="3.2.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-hipergeometrica"><i class="fa fa-check"></i><b>3.2.4</b> Distribucion hipergeometrica</a></li>
+<li class="chapter" data-level="3.2.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-binomial-negativa"><i class="fa fa-check"></i><b>3.2.5</b> Distribucion binomial negativa</a></li>
+<li class="chapter" data-level="3.2.6" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-poisson"><i class="fa fa-check"></i><b>3.2.6</b> Distribucion Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#procesos-de-poisson."><i class="fa fa-check"></i><b>3.3</b> Procesos de Poisson.</a></li>
+<li class="chapter" data-level="3.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variables-aleatorias-continuas."><i class="fa fa-check"></i><b>3.4</b> Variables aleatorias continuas.</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-uniforme-x-uab"><i class="fa fa-check"></i><b>3.4.1</b> Distribucion uniforme (<span class="math inline">\(X ~ U(A,B)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-normal-x-nmu-sigma2---distribucion-normal-standard-z-n0-1"><i class="fa fa-check"></i><b>3.4.2</b> Distribucion normal (<span class="math inline">\(X ~ N(\mu, \sigma^2\)</span>)) - Distribucion normal standard (<span class="math inline">\(Z ~ N(0, 1\)</span>))</a></li>
+<li class="chapter" data-level="3.4.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-gamma-x-gammaalpha-lambda"><i class="fa fa-check"></i><b>3.4.3</b> Distribucion gamma (<span class="math inline">\(X ~ \Gamma(\alpha, \lambda)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.4" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-exponencial-x-epsilonlambda"><i class="fa fa-check"></i><b>3.4.4</b> Distribucion exponencial (<span class="math inline">\(X ~ \epsilon(\lambda)\)</span>)</a></li>
+<li class="chapter" data-level="3.4.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#distribucion-cauchy-x-epsilonlambda"><i class="fa fa-check"></i><b>3.4.5</b> Distribucion Cauchy (<span class="math inline">\(X ~ \epsilon(\lambda)\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#generacion-de-numeros-aleatorios."><i class="fa fa-check"></i><b>3.5</b> Generacion de numeros aleatorios.</a></li>
+<li class="chapter" data-level="3.6" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#funcion-generadora-de-momentos."><i class="fa fa-check"></i><b>3.6</b> Funcion generadora de momentos.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html"><i class="fa fa-check"></i><b>4</b> Vectores aleatorios</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#vectores-aleatorios-discretos"><i class="fa fa-check"></i><b>4.1</b> Vectores aleatorios discretos</a></li>
+<li class="chapter" data-level="4.2" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#vectores-aleatorios-continuos"><i class="fa fa-check"></i><b>4.2</b> Vectores aleatorios continuos</a></li>
+<li class="chapter" data-level="4.3" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#probabilidad-condicional-de-vectores-aleatorios."><i class="fa fa-check"></i><b>4.3</b> Probabilidad condicional de vectores aleatorios.</a></li>
+<li class="chapter" data-level="4.4" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#independencia-de-variables-aleatorias-sobre-un-vector."><i class="fa fa-check"></i><b>4.4</b> Independencia de variables aleatorias sobre un vector.</a></li>
+<li class="chapter" data-level="4.5" data-path="vectores-aleatorios.html"><a href="vectores-aleatorios.html#esperanza-y-covarianza-de-vectores-aleatorios."><i class="fa fa-check"></i><b>4.5</b> Esperanza y covarianza de vectores aleatorios.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><i class="fa fa-check"></i><b>5</b> Teorema central del limite - Ley de los grandes numeros</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#desigualdad-de-markov"><i class="fa fa-check"></i><b>5.1</b> Desigualdad de Markov</a></li>
+<li class="chapter" data-level="5.2" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#desigualdad-de-chebyshev"><i class="fa fa-check"></i><b>5.2</b> Desigualdad de Chebyshev</a></li>
+<li class="chapter" data-level="5.3" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-de-los-grandes-numeros"><i class="fa fa-check"></i><b>5.3</b> Ley de los grandes numeros</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-debil"><i class="fa fa-check"></i><b>5.3.1</b> Ley debil</a></li>
+<li class="chapter" data-level="5.3.2" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#ley-fuerte"><i class="fa fa-check"></i><b>5.3.2</b> Ley fuerte</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="teorema-central-del-limite---ley-de-los-grandes-numeros.html"><a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html#teorema-central-del-limite"><i class="fa fa-check"></i><b>5.4</b> Teorema central del limite</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilidades y estadistica (c)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vectores-aleatorios" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Vectores aleatorios<a href="vectores-aleatorios.html#vectores-aleatorios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Dado un experimento y su espacio muestra asociado, es posible definir diferentes variables aleatorias. Asi como analizamos cada variable aleatoria de manera individual, es posible analizar varias de manera conjunta.</p>
+<p>Definicion : Sean <span class="math inline">\(X_1, \ldots, X_n\)</span> variables aleatorias, definimos un <em>vector aleatorio</em> al vector <span class="math inline">\(\mathcal{V} : \Omega \to \mathbb{R}^n\)</span> tal que
+<span class="math display">\[ V(\omega) = &lt;X_1(\omega), X_2(\omega), \ldots, X_n(\omega)&gt;\]</span>
+donde cada funcion coordenada es una variable aleatoria.</p>
+<blockquote>
+<p>Tipico ejemplo de X = ‘Altura de una persona’, Y = ‘Peso de una persona’.
+En un ejemplo de computacion podria ser la cantidad de tiempo de ejecucion y la memoria utilizada.</p>
+</blockquote>
+<div id="vectores-aleatorios-discretos" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Vectores aleatorios discretos<a href="vectores-aleatorios.html#vectores-aleatorios-discretos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Observacion : Rango del vector : <span class="math inline">\(Rg_{X Y} = \{ (x, y) / x \in Rg_{X}, y \in Rg_{Y} \wedge p_{X Y}(x, y) &gt; 0 \}\)</span> (Para n = 2)
+<span class="math inline">\(Rg_{X Y} \subseteq \{ (x, y) / x \in Rg_{X}, y \in Rg_{Y} \}\)</span> (Para n = 2)</p>
+<p>Definicion : Sean <span class="math inline">\(X, Y\)</span> variables aleatorias discretas definidas sobre un espacio muestral <span class="math inline">\(\mathcal{S}\)</span>. Se define <em>funcion de probabilidad puntual conjunta</em> como:
+<span class="math display">\[p_{X Y}(x, y) = P(X = x, Y = y)\]</span></p>
+<p>Observacion : La funcion de probabilidad conjunta es una probabilidad, por lo tanto cumple los axiomas de probabilidad</p>
+<ul>
+<li><span class="math inline">\(p_{X Y} (x, y) \geq 0 \forall (x, y) \in Rg_{X Y}\)</span></li>
+<li><span class="math inline">\(\sum_{x \in Rg_{X}} \sum_{y \in Rg_{Y}} p_{X Y} (x, y) = 1\)</span></li>
+</ul>
+<p>Definicion : Se define <em>funciones marginales</em> de un vector aleatorio de dos variables como</p>
+<p><span class="math display">\[p_{X}(x) = \sum_{y \in Y} p_{X Y} (x, y) \qquad p_{Y}(y) = \sum_{x \in X} p_{X Y} (x, y)\]</span></p>
+<blockquote>
+<p>Las funciones marginales me determinan las probabilidades puntuales de una variable aleatoria del vector en un valor puntual.</p>
+</blockquote>
+<p>Definicion : La <em>funcion de distribucion acumulada conjunta</em> de un vector aleatorio esta dado por
+<span class="math display">\[F_{X Y}(x, y) = \sum_{s \leq X} \sum_{t \leq Y}  p_{X Y} (x, y) \qquad \forall (x, y) \in \mathbb{R}^2\]</span></p>
+<p>Definicion : Sea <span class="math inline">\(\mathcal{V}\)</span> un vector aleatorio con variables aleatorias continuas. Decimos que el vector <span class="math inline">\(\mathcal{V}\)</span> es
+continuo si existe una <em>funcion de densidad conjunta</em> <span class="math inline">\(f_{X Y} : \mathbb{R}^2 \rightarrow \mathbb{R}^{\geq 0}\)</span> tal que
+<span class="math display">\[P((X, Y) \in A) = \int \int_{A} f_{X Y}(x, y) dx dy \qquad \forall A \subseteq \mathbb{R}^2\]</span></p>
+</div>
+<div id="vectores-aleatorios-continuos" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Vectores aleatorios continuos<a href="vectores-aleatorios.html#vectores-aleatorios-continuos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Observacion : Dada una funcion de densidad conjunta <span class="math inline">\(f_{X Y}\)</span>. Si queremos encontrar la funcion de densidad para cualquiera de
+las dos variables aleatorias, debo integrar sobre la variable que no es de interes.</p>
+<p>Observacion : Dado un vector aleatorio de K coordenadas, puedo hallar las funciones de densidad para cualquier subconjunto de
+las variables aleatorias <span class="math inline">\(X_i \forall i, 0 \leq i \leq k-1\)</span></p>
+<p>Definicion : Sea <span class="math inline">\(\mathcal{V}\)</span> un vector aleatorio continuo con funcion de densidad conjunta <span class="math inline">\(f_{X Y}(x, y)\)</span>. La <em>funcion de distribucion acumulada conjunta</em> de <span class="math inline">\(\mathcal{V}\)</span> esta dada por
+<span class="math display">\[F_{(X, Y)}(x, y) = \int_{-\infty}^x \int_{-\infty}^y f_{X Y}(s, t) ds dt \qquad \forall A \subseteq \mathbb{R}^2\]</span></p>
+<p>Propiedades : Funcion de distribucion acumulada</p>
+<ul>
+<li><span class="math inline">\(\lim_{(X_1, \ldots, X_n) -&gt; \infty} F((X_1, \ldots, X_n)) = 1\)</span></li>
+<li><span class="math inline">\(\lim_{X_i -&gt; -\infty} F((X_1, \ldots, X_i ,\ldots ,X_n)) = 0\)</span> para algun i</li>
+<li>Monotonia : <span class="math inline">\(F_{X} \leq F_{\hat{X}}\)</span> si <span class="math inline">\(X \leq \hat{X}\)</span>
+Esta propiedad define un orden sobre los vectores de <span class="math inline">\(\mathbb{R}^n\)</span>. Vamos a decir que un vector es menor a otro si todas
+las coordenadas del uno son menores a las del otro.</li>
+<li>(Chequear) <span class="math inline">\(P(a \leq x \leq b, c \leq y \leq d) = F(b, d) - F(a, d) - F(b, c) + F(a, c) \geq 0\)</span>
+Caso contrario, entonces F no es una probabilidad.</li>
+</ul>
+<p>Nota : Para hallar la funcion de densidad conjunta de un vector aleatorio dada la funcion de distribucion, entonces basta con
+derivar F con cada una de las variables aleatorias.</p>
+<p>Duda : Es posible que, si la funcion F es <span class="math inline">\(C^1\)</span>, entonces tranquilamente pueda calcular la funcion de densidad conjunta derivando
+en cualquier orden?
+Respuesta : Si, pero en la practica no siempre ocurre</p>
+</div>
+<div id="probabilidad-condicional-de-vectores-aleatorios." class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Probabilidad condicional de vectores aleatorios.<a href="vectores-aleatorios.html#probabilidad-condicional-de-vectores-aleatorios." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion : Sea <span class="math inline">\(\mathcal{V}\)</span> un vector aleatorio discreto con funcion de densidad conjunta <span class="math inline">\(f_{X Y}(x, y)\)</span> y funciones de probabilidad marginales para cada variable aleatoria. Sea <span class="math inline">\(x \in X\)</span> tal que <span class="math inline">\(p_{X}(x) &gt; 0\)</span>. La <em>funcion de probabilidad condicional</em> de Y dado <span class="math inline">\(X = x\)</span> esta dada por
+<span class="math display">\[p_{Y | X = x} (y) = \frac{p_{X Y}(x, y)}{p_{X}(x)}\]</span>
+Equivalentemente, la <em>funcion de probabilidad condicional</em> de <span class="math inline">\(X\)</span> dado <span class="math inline">\(Y = y\)</span> esta dada por
+<span class="math display">\[p_{X | Y = y} (x) = \frac{p_{X Y}(x, y)}{p_{Y}(y)}\]</span></p>
+<p>Definicion : Sea <span class="math inline">\(\mathcal{V}\)</span> un vector aleatorio continuo con funcion de densidad conjunta <span class="math inline">\(f_{X Y}(x, y)\)</span> y funciones de probabilidad marginales para cada variable aleatoria. Sea <span class="math inline">\(x \in X\)</span> tal que <span class="math inline">\(f_{X}(x) &gt; 0\)</span>. La <em>funcion de densidad condicional</em> de Y dado <span class="math inline">\(X = x\)</span> esta dada por
+<span class="math display">\[f_{Y | X = x} (y) = \frac{f_{X Y}(x, y)}{f_{X}(x)}\]</span>
+Equivalentemente, la <em>funcion de densidad condicional</em> de <span class="math inline">\(X\)</span> dado <span class="math inline">\(Y = y\)</span> esta dada por
+<span class="math display">\[f_{X | Y = y} (x) = \frac{f_{X Y}(x, y)}{f_{Y}(y)}\]</span></p>
+<p>Observacion : Las funciones de probabilidad condicional cumplen que son una probabilidad. Podemos observar que la probabilidad condicional en vectores aleatorios es en esencia igual a cualquier probabilidad condicional, es decir, analizo probabilidades sobre un espacio de probabilidades reducido.</p>
+<p>Definicion : Sea <span class="math inline">\(\mathcal{V}\)</span> un vector aleatorio discreto. Una distribucion multinomial (Extension de la distribucion binomial) se denota <span class="math inline">\(\mathcal{V} ~ M(n, p_1, \ldots, p_n)\)</span></p>
+</div>
+<div id="independencia-de-variables-aleatorias-sobre-un-vector." class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Independencia de variables aleatorias sobre un vector.<a href="vectores-aleatorios.html#independencia-de-variables-aleatorias-sobre-un-vector." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Definicion : Sean <span class="math inline">\(X_1, \ldots, X_n\)</span> variables aleatorias. Se dice que son independientes si
+<span class="math display">\[P(X_1 \in B_1, \ldots, X_n \in B_n) = P(X_1 \in B_1) * \ldots * P(X_n \in B_n)\]</span></p>
+<p>Teorema : Sean <span class="math inline">\(X_1, \ldots, X_n\)</span> variables aleatorias discretas. Son independientes si y solo si puedo escribir la probabilidad conjunta de las variables como el producto de las probabilidades marginales de las variables. Es decir:
+<span class="math display">\[p_{(X_1 \ldots, X_n)}(X_1, \ldots, X_n) = \prod_{i = 1}^{n} p_{X_i}(x_i)\]</span></p>
+<p>Teorema : Sean <span class="math inline">\(X_1, \ldots, X_n\)</span> variables aleatorias continuas. Son independientes si y solo si puedo escribir la probabilidad acumulada como el producto de las probabilidades acumuladas marginales de las variables. Es decir:
+<span class="math display">\[F_{(X_1 \ldots, X_n)}(t_1, \ldots, t_n) = \prod_{i = 1}^{n} F_{X_i}(t_i)\]</span></p>
+<p>Proposicion : Si existen funciones h y g tales que <span class="math inline">\(p_{X Y}(x, y) = c.h(x).g(y)\)</span> con <span class="math inline">\(c &gt; 0\)</span>, entonces <span class="math inline">\(X\)</span> e Y son independientes</p>
+</div>
+<div id="esperanza-y-covarianza-de-vectores-aleatorios." class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Esperanza y covarianza de vectores aleatorios.<a href="vectores-aleatorios.html#esperanza-y-covarianza-de-vectores-aleatorios." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Proposicion : Dado el vector aleatorio <span class="math inline">\(\mathcal{V} = &lt;X, Y&gt;\)</span> donde <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> son dos variables aleatorias, entonces la esperanza del vector aleatorio esta dado por</p>
+<ul>
+<li>Si el vector es discreto
+<span class="math display">\[ E_{h(X, Y)} = \sum_{x \in Rg{x}} \sum_{y \in Rg{y}} h(x, y) p_{XY}(x, y) dx dy \]</span></li>
+<li>Si el vector es continuo
+<span class="math display">\[ E_{h(X, Y)} = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} h(x, y) f_{XY}(x, y) dx dy \]</span></li>
+</ul>
+<p>Proposicion : Si <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> son independientes, entonces
+<span class="math display">\[E(XY) = E(X)E(Y) \]</span></p>
+<p>En vectores aleatorios buscamos la relacion que hay entre los valores de las variables. Para eso utilizamos la covarianza, la cual nos da una nocion de como se relacionan.
+En general, la covarianza se mide como</p>
+<ul>
+<li><p>Si el vector es discreto
+<span class="math display">\[cov(X, Y) = \sum_{x} \sum_{y} (\mu_x - x)(\mu_y - y)p_{XY}(x,y)\]</span></p></li>
+<li><p>Si el vector es continuo
+<span class="math display">\[cov(X, Y) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} (\mu_x - x)(\mu_y - y)f_{XY}(x,y) dx dy\]</span></p></li>
+</ul>
+<p>Proposicion : <span class="math inline">\(cov(X, Y) = E(XY) - E(X)E(Y)\)</span></p>
+<p>Definicion : Definimos <em>coeficiente de correlacion</em> entre dos variables a
+<span class="math display">\[\rho(X, Y) = \frac{cov(X, Y)}{\sigma_X \sigma_Y}\]</span></p>
+<blockquote>
+<p>El coeficiente de correlacion determina (De alguna manera) la proporcion entre la covarianza de dos variables y sus desviaciones estandar. Tiene un poco de sentido</p>
+</blockquote>
+<p>Propiedades :</p>
+<ul>
+<li><span class="math inline">\(-1 \leq \rho(X, Y) \leq 1\)</span></li>
+<li><span class="math inline">\(\rho(aX + b, cY +d) = sg(ac) . \rho(X, Y)\)</span></li>
+<li><span class="math inline">\(|\rho(X, Y) = 1| \leftrightarrow Y = aX + b\)</span> con probabilidad 1 (No lo entiendo…)</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="variables-aleatorias.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="teorema-central-del-limite---ley-de-los-grandes-numeros.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "sepia",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
