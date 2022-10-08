@@ -2,23 +2,21 @@
 
 ## Definicion. 
 
-Definicion (Variable aleatoria) : Sea S un espacio muestral asociado a un experimento. Llamamos variable aleatoria $X$ a una funcion
+**Definicion** : Sea S un espacio muestral asociado a un experimento. Llamamos _variable aleatoria_ $X$ a una funcion
                                   $X : S \to \mathbb{R}$ que asocia a cada elemento de S un valor real.
 
-Definicion (Rango de una VA) : Sea $X$ una VA. Llamamos _rango de X_ al conjunto
-                                Rg($X$) = {x $\in \mathbb{R}$ / $\exists$ w $\in$ S / $X(w) = x$}
+**Definicion** : Sea $X$ una VA. Llamamos _rango de X_ al conjunto Rg($X$) = {x $\in \mathbb{R}$ / $\exists$ w $\in$ S / $X(w) = x$}
 
 Nota : Rg($X$) = Im($X$)
 
-Definicion (Funcion de probabilidad puntual) : Una funcion de probabilidad puntual (FPP) de la VA $X$ es 
-                                               $$p_{X}(x) = P(X = x) = P({w \in S / X(w) = x})$$
+**Definicion** : Una _funcion de probabilidad puntual_ (FPP) de la VA $X$ es $$p_{X}(x) = P(X = x) = P({w \in S / X(w) = x})$$
 
-Observacion : $p_{X}$ es una probabilidad. Por lo tanto se cumplen
+**Observacion** : $p_{X}$ es una probabilidad. Por lo tanto se cumplen
 
   * $p_{X} \geq 0$   $\forall x \in Rg(X)$
   * $\sum_{x in Rg(X)} p_{X}(x) = 1$
 
-Definicion ( Funcion de distribucion acumulada) : Una funcion de distribucion acumulada de una VA discreta $X$ con funcion de probabilidad
+**Definicion** : Una _funcion de distribucion acumulada_ de una VA discreta $X$ con funcion de probabilidad
                                                   puntual $p_{X}(x)$ es
                                                   $$F_{X}(x) = P(X \leq x) = \sum_{y \leq x, y \in Rg(X)} p_{X}(y)$$
 
@@ -36,7 +34,7 @@ Propiedades : Funcion de distribucion acumulada
 
 Nota : $F_{X}(x^-) = \lim_{h -> 0^-} F_{X}(x + h) = P(X < x)$
 
-Proposicion : Si $a \leq b$ tales que $a,b \in Rg(X)$, entonces
+**Proposicion** : Si $a \leq b$ tales que $a,b \in Rg(X)$, entonces
 
   * $P(a < X \leq b) = F_{X}(b) - F_{X}(a)$
   * $P(a \leq X \leq b) = F_{X}(b) - F_{X}(a^-)$
@@ -44,44 +42,33 @@ Proposicion : Si $a \leq b$ tales que $a,b \in Rg(X)$, entonces
   * $P(a \leq X < b) = F_{X}(b^-) - F_{X}(a^-)$
 
 ### Esperanza 
-Definicion : Se define esperanza o valor esperado de una VA discreta a un promedio ponderado de 
-                         los valores que toma la variable $X$.
+**Definicion** : Se define _esperanza_ o _valor esperado_ de una VA discreta a un promedio ponderado de los valores que toma la variable $X$.
                          $$E(X) = \sum_{x \in Rg(X)} x . p_{X}(x)$$
                          Esta definicion vale siempre y cuando la suma sea finita. Es decir, $E(X) < \infty$.
 
 Nota : Se puede interpretar a la esperanza como el "punto de equilibrio" de la VA.
 
 ### Varianza 
-Definicion (Varianza) : Se define varianza de una variable aleatoria discreta $X$ con FPP $p_{X}(x)$ y esperanza
+**Definicion** : Se define _varianza_ de una variable aleatoria discreta $X$ con FPP $p_{X}(x)$ y esperanza
                         $\mu_{X}$ a la siguiente expresion
                         $$V(X) = E((x - \mu_{X})^2) = \sum_{x \in Rg{X}} (x - \mu_{X})^2 . p_{X}(x)$$
                         Este valor representa la dispersion de los valores alrededor de la esperanza de $X$.
 
-Definicion (Desviacion estandar) : Definicion desvio estandar de $X$ a
+**Definicion** : Se define el _desvio estandar_ de $X$ como
                                    $$\sigma_{X} = \sqrt{V(X)}$$
 
-Propiedades : Sean $X$, $\Psi$ variables aleatorias discretas
+**Propiedades** : Sean $X$, $\Psi$ variables aleatorias discretas
   * $E(aX + b\Psi) = aE(X) + bE(\Psi) \quad \forall a, b \in \mathbb{R}$ 
   * Dada h : $\mathbb{R} -> \mathbb{R}$, entonces $E(h(X)) = \sum_{x \in Rg(X)} h(x).p_{X}(x)$
 
-Observacion : La varianza $V(X)$ se puede reescribir como $V(X) = E(X^2) - E(X)^2$
+**Observacion** : La varianza $V(X)$ se puede reescribir como $V(X) = E(X^2) - E(X)^2$
 
-{
-NOTA Y PREGUNTA: Dadas dos variables aleatorias con la misma esperanza. Podemos determinar la varianza de cada una de ellas y 
-                 ver como difieren en la variabilidad de los valores.
-                 Ahora, si tengo dos v.a con la misma esperanza Y varianza, puedo determinar una relacion entre las variables?
-AUTORESPUESTA: No. Tengo un experimento donde dos variables aleatorias describen dos caracteristicas distintas de mi experimento.
-               Puede ser que cuando veamos correlacion esto me termine de cerrar.
-}
-
-
-Propiedad (Perdida de memoria) : Sea $X ~ G(\alpha)$ una distribucion geometrica y dados $n, m \in \mathbb{N}$, entonces
-                                P($X$ > n + m | $X$ > n) = P($X$ > m)
+**Propiedad** : Sea $X ~ G(\alpha)$ una distribucion geometrica y dados $n, m \in \mathbb{N}$, entonces por la propiedad de perdida de memoria P($X$ > n + m | $X$ > n) = P($X$ > m)
 
 ## Variables aleatorias discretas
 
-### Distribucion Bernoulli
-$X$ es una VA que mide el numero de exitos en un experimento con dos posibles resultados. Exito o fracaso. Esta variable se denomina distribucion Bernoulli de parametro $\alpha$ y se denota $X ~ B(\alpha)$.
+### Distribucion Bernoulli ($X \sim B(\alpha)$).
+$X$ es una VA que mide el numero de exitos en un experimento con dos posibles resultados. Exito o fracaso. Esta variable se denomina distribucion Bernoulli de parametro $\alpha$.
 
   - Funcion de probabilidad puntual
       $$p(1-p)^{k-1}$$
@@ -92,9 +79,9 @@ $X$ es una VA que mide el numero de exitos en un experimento con dos posibles re
   - Varianza
       $$\alpha(1 - \alpha)$$
 
-### Distribucion binomial 
+### Distribucion binomial ($X \sim Bi(\alpha, n)$).
 $X$ es una VA que mide el numero de exitos en n experimentos de tipo Bernoulli de parametro $\alpha$ donde cada experimento es independiente del otro.
-La variable se denomina distribucion binomial con $\alpha$, n parametros y se la denota $X ~ Bi(\alpha, n)$.
+La variable se denomina distribucion binomial con $\alpha$, n parametros.
 
   - Funcion de probabilidad puntual
     $${n \choose k} p^k (1 - p)^{n-k}$$
@@ -105,9 +92,9 @@ La variable se denomina distribucion binomial con $\alpha$, n parametros y se la
   - Varianza
     $$np(1 - p)$$
 
-### Distribucion geometrica
+### Distribucion geometrica ($X \sim G(\alpha)$).
 
-$X$ es una VA que mide el numero de repeticiones de experimentos de tipo Bernoulli hasta obtener el primer exito. Dicha VA se denomina distribucion geometrica de parametro $\alpha$ y se la denota $X ~ G(\alpha)$.
+$X$ es una VA que mide el numero de repeticiones de experimentos de tipo Bernoulli hasta obtener el primer exito. Dicha VA se denomina distribucion geometrica de parametro $\alpha$.
 El valor x $\in Rg(X)$ corresponde a la cantidad de repeticiones hasta conseguir el exito.
 
   - Funcion de probabilidad puntual
@@ -119,9 +106,9 @@ El valor x $\in Rg(X)$ corresponde a la cantidad de repeticiones hasta conseguir
   - Varianza
       $$\frac{(1-p)}{p^2}$$
 
-### Distribucion hipergeometrica 
+### Distribucion hipergeometrica ($X \sim H(N, n, e)$).
 $X$ es una VA que mide el numero de exitos de una muestra de tamanio n de un conjunto de tamanio N. Teniendo en cuenta que la eleccion de la muestra n se hace de forma equiprobable.
-La variable se denomina distribucion hipergeometrica de tamanio N con muestra n y e exitos. Se la denota $X ~ H(N, n, e)$. 
+La variable se denomina distribucion hipergeometrica de tamanio N con muestra n y e exitos.
 
   - Funcion de probabilidad puntual
       $$\frac{{D \choose k} {N - D \choose n - k}}{N \choose n}$$
@@ -134,8 +121,8 @@ La variable se denomina distribucion hipergeometrica de tamanio N con muestra n 
 
 > Notar que la distribucion hipergeometrica es valida si y solo si max(0, n -(N - D)) $\leq$ k $\leq$ min(n, D)
 
-### Distribucion binomial negativa 
-$X$ es una VA que mide r exitos en repeticiones de experimentos de tipo Bernoulli independientes. Esta variable se denomina distribucion binomial negativa de parametros r y p y se la denota $X ~ BN(r, p)$
+### Distribucion binomial negativa ($X \sim BN(r, p)$).
+$X$ es una VA que mide r exitos en repeticiones de experimentos de tipo Bernoulli independientes. Esta variable se denomina distribucion binomial negativa de parametros r y p.
 
   - Funcion de probabilidad puntual
       $${k - 1 \choose r - 1}p^r (1 - p)^{k - r}$$
@@ -146,8 +133,8 @@ $X$ es una VA que mide r exitos en repeticiones de experimentos de tipo Bernoull
   - Varianza
       $$\frac{r(1 - p)}{p}$$
 
-### Distribucion Poisson 
-$X$ es una VA binomial con $\lambda = np$, entonces cuando $\lim_{n \xrightarrow \infty} n$ y $\lim_{p \xrightarrow 0} p$. Este tipo de variable se la considera una distribucion de Poisson de parametro $\lambda$ y se la denota $X ~ P(\lambda)$
+### Distribucion Poisson ($X \sim P(\lambda)$).
+$X$ es una VA binomial con $\lambda = np$, entonces cuando $\lim_{n \xrightarrow \infty} n$ y $\lim_{p \xrightarrow 0} p$. Este tipo de variable se la considera una distribucion de Poisson de parametro $\lambda$.
 
   - Funcion de probabilidad puntual
       $$\frac{e^{-\lambda} \lambda^k}{k!}$$
@@ -162,23 +149,21 @@ $X$ es una VA binomial con $\lambda = np$, entonces cuando $\lim_{n \xrightarrow
 
 ## Procesos de Poisson.
 
-
 ## Variables aleatorias continuas.
 
-Definicion : Sea $X$ una variable aleatoria. Decimos que $X$ es continua si existe una funcion $f : \mathbb{R} \rightarrow \mathbb{R^+}$ llamada _funcion de densidad de_ $X$ tal que
+**Definicion** : Sea $X$ una variable aleatoria. Decimos que $X$ es _continua_ si existe una funcion $f : \mathbb{R} \rightarrow \mathbb{R^+}$ llamada _funcion de densidad de_ $X$ tal que
              $$P(X \in A) = \int_{A} f(x) dx \qquad \forall A \subseteq \mathbb{R}$$
 
 Propiedad : Si $A = [a, b]$, entonces $P(a \leq X \leq b = \int_{a}^{b} f(x) dx$
 
-Nota: Notar que $P(X = a) = \int_{a}^{a} f(x) dx = 0 \qquad \forall a \in \mathbb{R}$. Esto se debe a que no podemos 
-      determinar la probabilidad de un punto especifico.
+Nota: Notar que $P(X = a) = \int_{a}^{a} f(x) dx = 0 \qquad \forall a \in \mathbb{R}$. Esto se debe a que no podemos determinar la probabilidad de un punto especifico.
 
-Observacion : Para que una funcion f(x) sea una funcion de densidad, debe satisfacer
+**Observacion** : Para que una funcion f(x) sea una funcion de densidad, debe satisfacer
 
   - $f(x) \geq 0 \forall x \in \mathbb{R}$
   - $\int_{-\infty}^{\infty} f(x) dx = 1$
 
-Definicion : La funcion de distribucion acumulada de una variable aleatoria continua $X$ con funcion de densidad f(x) se
+**Definicion** : La _funcion de distribucion acumulada_ de una variable aleatoria continua $X$ con funcion de densidad f(x) se
              define para todo $x \in \mathbb{R}$ como
              $$F(x) = P(X \leq x) = \int_{-\infty}^{t} f(t) dt$$
              En comparacion con las funciones de distribucion de variables discretas, el grafico de esta es una funcion
@@ -190,10 +175,10 @@ Propiedades : Funcion de distribucion acumulada continua
   * $F_{X}$ es una funcion continua. 
   * $\lim_{x -> \infty} F_{X}(x) = 1 \qquad \lim_{x -> -\infty} F_{X}(x) = 0$
 
-Proposicion: Sea $X$ una variable aleatoria continua con funcion de densidad f(x) y funcion de distribucion acumulada F(x), entonces
+**Proposicion**: Sea $X$ una variable aleatoria continua con funcion de densidad f(x) y funcion de distribucion acumulada F(x), entonces
              $$F'(x) = \frac{dF(x)}{dx} = f(x)$$
 
-Definicion (Percentiles) :
+**Definicion** (Percentiles) :
 
 
 Propiedades : Distribuciones continuas
@@ -210,7 +195,7 @@ Propiedades : Distribuciones continuas
   * Si $X ~ \Gamma(\alpha, \lambda)$ y ademas $a > 0 \rightarrow a X ~ \Gamma(\alpha, \frac{\lambda}{a})$
   * Si $X ~ \Gamma(1, \lambda) \rightarrow  X ~ \epsilon(\lambda)$
 
-Definicion : Se define la funcion $\Gamma : \mathbb{R}_{\geq 0} \rightarrow \mathbb{R}$ como 
+**Definicion** : Se define la _funcion Gamma_ $\Gamma : \mathbb{R}_{\geq 0} \rightarrow \mathbb{R}$ como 
               $$\Gamma(\alpha) = \int_{0}^{\infty} x^{\alpha - 1} e^{-x} dx$       $\alpha > 0$$
 
 Propiedades : Funcion Gamma
@@ -223,10 +208,9 @@ la distribucion de $\mathcal{Y}$ comparando la esperanza y la varianza de aquell
 
 Lema: $X ~ N(\mu, \sigma^2) \rightarrow Y = aX + b$ implica que $Y ~ N(a\mu + b, a^2\sigma^2)$
 
-
 A continuacion se presentan algunas distribuciones famosas que se utilizaran a lo largo de la materia.
 
-### Distribucion uniforme ($X ~ U(A,B)$)
+### Distribucion uniforme ($X \sim U(A,B)$).
 
   - Funcion de densidad
       $$\frac{1}{B - A}$$
@@ -237,7 +221,7 @@ A continuacion se presentan algunas distribuciones famosas que se utilizaran a l
   - Varianza
       $$\frac{(B - A)^2}{12}$$
 
-### Distribucion normal ($X ~ N(\mu, \sigma^2$)) - Distribucion normal standard ($Z ~ N(0, 1$))
+### Distribucion normal ($X \sim N(\mu, \sigma^2$)) - Distribucion normal standard ($Z \sim N(0, 1$)).
 
   - Funcion de densidad
       $$\frac{1}{\sqrt{2\pi}\sigma} e^{\frac{-1}{2\sigma^2} (x - \mu)^2}$$
@@ -248,7 +232,7 @@ A continuacion se presentan algunas distribuciones famosas que se utilizaran a l
   - Varianza
       $$\sigma^2$$
 
-### Distribucion gamma ($X ~ \Gamma(\alpha, \lambda)$)
+### Distribucion gamma ($X \sim \Gamma(\alpha, \lambda)$).
 
   - Funcion de densidad
       $$\frac{e^{-\lambda x}x^{\alpha - 1} \lambda^{\alpha} }{\Gamma(\alpha)}$$
@@ -259,43 +243,46 @@ A continuacion se presentan algunas distribuciones famosas que se utilizaran a l
   - Varianza
       $$\frac{\alpha}{\lambda^2}$$
 
-### Distribucion exponencial ($X ~ \epsilon(\lambda)$)
+### Distribucion exponencial ($X \sim \epsilon(\lambda)$).
 
   - Funcion de densidad
       $$f(x) = e^{-\lambda x}\lambda$$
   - Funcion de distribucion acumulada
-      $$1 - e^{-\lambda x}      x > 0$$
+      $$1 - e^{-\lambda x}   \qquad   x > 0$$
   - Esperanza
       $$\frac{1}{\lambda}$$
   - Varianza
       $$\frac{1}{\lambda^2}$$
 
-Propiedad (Falla de memoria de una distribucion exponencial) : Si $X ~ \epsilon(\lambda)$, entonces
+**Propiedad** : Si $X ~ \epsilon(\lambda)$, entonces por falla de memoria:
           $$P( X > t + s | x > t) = P(X > s)$$
 
 > Se puede demostrar que la exponencial es la unica variable aleatoria continua tal que vale la falla de memoria.
 
-Observacion : Relacion entre la distribucion exponencial y los procesos de Poisson
+**Observacion** : Relacion entre la distribucion exponencial y los procesos de Poisson
               No entendi... Es como si pudiese vincular una variable aleatoria continua con su forma discreta de un experimento
               con distribucion de Poisson
 
 Nota : $T_k$ = Tiempo que demora hasta el k-esimo evento. Entonces deriva en una variable $\Gamma$
 
-### Distribucion Cauchy ($X ~ \epsilon(\lambda)$)
+### Distribucion Cauchy ($X \sim \epsilon(\lambda)$).
 Despues la explico
-### Distribucion T-Student ($X ~ \epsilon(\lambda)$)
+
+### Distribucion T-Student ($X \sim \epsilon(\lambda)$).
 Despues la explico
-### Distribucion $\chi^2$ ($X ~ \epsilon(\lambda)$)
+
+### Distribucion $\chi^2$ ($X \sim \epsilon(\lambda)$).
 Despues la explico
-### Distribucion Raileigh ($X ~ \epsilon(\lambda)$)
+
+### Distribucion Raileigh ($X \sim \epsilon(\lambda)$).
 Despues la explico
-### Distribucion Pareto ($X ~ \epsilon(\lambda)$)
+
+### Distribucion Pareto ($X \sim \epsilon(\lambda)$).
 Despues la explico
 
 ## Generacion de numeros aleatorios.
 
-Definicion (Teorema) : Sea $X ~ f(x)$ funcion de densidad tal que $P(x \in (a, b)) = 1$. Sea $g : (a, b) \rightarrow \mathbb{R}$
-                       tal que g es monotona creciente o monotona decreciente. Sea $Y = g(X)$, entonces
+**Teorema** : Sea $X ~ f(x)$ funcion de densidad tal que $P(x \in (a, b)) = 1$. Sea $g : (a, b) \rightarrow \mathbb{R}$ tal que g es monotona creciente o monotona decreciente. Sea $Y = g(X)$, entonces
 $$ f_Y(y) =   \left\{
   \begin{array}{ll}
         f_X[g^{-1}(y)] . (g^{-1}(y))' &  y = g(x) \text{ para algun x}  \\
@@ -308,29 +295,26 @@ $$ f_Y(y) =   \left\{
 
 > Este teorema nos brinda una forma comoda de encontrar una densidad de una v.a que depende de otra. Anteriormente lo que se hacia era hallar la funcion de distribucion de $F_Y$ y luego derivar la F para encontrar la densidad, ahora con este teorema sale directamente el calculo de la densidad.
 
-Corolario : En general, $g:\mathbb{R} \rightarrow \mathbb{R}$ tal que $\exists g_i : G_i \rightarrow \mathbb{R}$ y ademas es inversible $\forall i / 1 \leq i \leq n$
-            entonces $g(x) = g_i(x)$ si $x \in G_i$.
+**Corolario** : En general, $g:\mathbb{R} \rightarrow \mathbb{R}$ tal que $\exists g_i : G_i \rightarrow \mathbb{R}$ y ademas es inversible $\forall i / 1 \leq i \leq n$ entonces $g(x) = g_i(x)$ si $x \in G_i$.
 
-Observacion : El corolario nos dice que si no tenemos una funcion que es monotona, pero tiene partes donde lo hace, entonces
+**Observacion** : El corolario nos dice que si no tenemos una funcion que es monotona, pero tiene partes donde lo hace, entonces
               podemos calcular la densidad como una suma de particiones.
               $f_Y(y) = \sum_{i = 1}^n f_{X}(g_i^{-1}) . |g_i^{-1}(y)'| . I_{G_i}(g_i^{-1}(y))$
 
-Proposicion : Sea $X$ variable aleatoria continua con densidad $f_x$ y acumulada $F_x$. Supongamos que F es estrictamente creciente.
+**Proposicion** : Sea $X$ variable aleatoria continua con densidad $f_x$ y acumulada $F_x$. Supongamos que F es estrictamente creciente.
               Sea $\mathcal{U} ~ \mathcal{U}(0, 1)$. Si $Y = F_x^{-1}(u)$, entonces $Y ~ X$ (No lo entendi del todo)
 
 <!--
-
 ### Reescribir
-Definicion (RNG) : $X - p_X$ y tengo una uniforme $\mathcal{U} ~ \mathcal{U}(0, 1)$. 
+**Definicion** (RNG) : $X - p_X$ y tengo una uniforme $\mathcal{U} ~ \mathcal{U}(0, 1)$. 
 En general, si tenemos un $X$ variable aleatoria con rango $R_X = {x_1, \ldots, x_k}$ y $p_X(x_j) = p_j$. Entonces dada una
 distribucion uniforme $\mathcal{U} ~ \mathcal{U}(0, 1)$ definimos una particion del intervalo [0, 1] de manera que
 $[0, 1] = \cup_{i = 1}^{k} J_i$ donde $P(v \in J_i) = p_i$. Entonces se define $X = g(u)$ como $g(u) = x_j$ si $u \in J_j, 1 \leq j \leq k$
 ### Reescribir
 
-Definicion (Funcion inversa generalizada) : $F^{-1} (u) = inf{x / F(x) \geq u}$
+**Definicion** (Funcion inversa generalizada) : $F^{-1} (u) = inf{x / F(x) \geq u}$
 
-Observacion : Si F es inversible entonces la inversa generalizada coincide con la inversa.
-
+**Observacion** : Si F es inversible entonces la inversa generalizada coincide con la inversa.
 -->
 
 ## Funcion generadora de momentos.
